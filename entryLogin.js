@@ -16,7 +16,7 @@ function checkUser(){
 <p>Webhook Avatar Image</p>
 <textarea type="number" size="30" name="user_pic" title="Webhook Avatar" style="margin: 0px; width: 475px; height: 137px;">https://yt3.ggpht.com/ytc/AKedOLSnAJmY_FackkeN9b8IRtCI6-xBrRxx2RZpo4WB6A=s88-c-k-c0x00ffffff-no-rj</textarea><br>
 <p>Webhook URL</p>
-<textarea type="number" size="30" name="user_webhook" title="Webhook URL" style="margin: 0px; width: 478px; height: 143px;">https://discord.com/api/webhooks/853822869112619048/2T1J39oH0zGC8P5q7t0Fh__JLk85xibDtx6_CfpWZuepq3NY7vnjlHWOwSGaY_AQ_o4x</textarea><br>
+<textarea type="number" size="30" name="user_webhook" title="Webhook URL" style="margin: 0px; width: 478px; height: 143px;"></textarea><br>
 <input type="button" value="Send Webhook!" onclick="winsForm(this.form)">
 </form>
       `;
