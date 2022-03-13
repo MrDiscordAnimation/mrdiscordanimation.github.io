@@ -1,0 +1,121 @@
+<!--Captcha Verification System-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Captcha</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+  <center>  
+    <h3>Captcha validation</h3>
+    
+    <div id="captcha_wrapper">
+        <div id="captcha"></div>
+        <input type="text" id="input" placeholder="Insert Captcha" />
+        <div id="output">securitycode</div>
+        <div id="captcha_container">
+            <input type="button" id="checked" onclick="validate();" value="I'm not a robot"/>
+        </div>
+
+    </div><br>
+    
+    <!-- Scripts -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    margin:0; font-family: 'Ubuntu', sans-serif;
+    font-size:13px;
+}
+h3 {
+    position:absolute; padding:20px;
+    top:0px; left:100px; color:#379;
+}
+#input {
+    position:relative; width:80%; left:5%;
+    background-color:rgba(40,90,120,0.15);
+    border:solid 2px #379;
+    border-radius:4px; 
+    color:#379; margin:10px; padding:5px;
+}
+
+#captcha_wrapper {
+    position:absolute; padding:20px;
+    top:50px; left:50px;
+    border-bottom:solid 3px #379;
+    border-top:solid 3px #379;
+    background-color:rgba(40,90,120,0.11);
+}
+#captcha {
+    position:relative; width:100% height:200px;
+    background-color:rgba(40,90,120,0.15); 
+    border-radius:4px;
+    padding:10px; margin:20px;
+}
+#output {
+    width:70%; left:10%;
+    position:relative;
+    border:solid 1px #379; border-radius:4px;
+    background-color:rgba(40,90,120,0.15);
+    padding:1px; margin-bottom:10px; 
+    text-align:center;
+    display:none;
+}
+#captcha_container {
+    position:relative; background-color:rgba(40,90,120,0.3);
+    border-radius:4px;
+    padding:30px; 
+}
+
+</style>
+<script>
+function rand(captcha_str,fin){
+            captcha_str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+{}:,./;][=-";
+            fin=Math.floor(Math.random()*captcha_str.length);
+            for(let i=0; i<24; i++){
+                fin+=captcha_str[Math.floor(Math.random()* 85)];
+            }
+            console.log(captcha_str.length)
+            console.log("Security Debug Code: "+fin);
+            return fin;
+        }
+        var doc=document.getElementById("captcha");
+            doc.innerHTML=(rand());
+            /*
+------------------------------------------------------
+:: Code: Captcha
+:: Author: Vincent Berger
+-------------------------------------------------- 
+
+Remixed By Mr Discord Animation
+*/
+
+function validate(){
+    var input=document.getElementById("input"),
+        //check=document.getElementById("checked"),
+        valid=document.getElementById("output");
+    if(input.value===doc.textContent){
+        doc.innerHTML=(rand());
+        valid.style.display="block";
+        valid.style.color="#090";
+        valid.style.border="solid 1px #090";
+        valid.style.backgroundColor="rgba(0,170,0,0.15)";
+        valid.innerHTML=("Valid Captcha! Redirecting....");
+        window.location="./youtube-test.html";
+    }else{
+        doc.innerHTML=(rand());
+        valid.style.display="block";
+        valid.style.color="#900";
+        valid.style.border="solid 1px #900";
+        valid.style.backgroundColor="rgba(170,0,0,0.15)";
+        valid.innerHTML=("Invalid Captcha! Try again!");
+        console.log("Incorrect Debug Code: " + input.value)
+    }
+}
+</script>
+
+</center>
+</body>
+</html>

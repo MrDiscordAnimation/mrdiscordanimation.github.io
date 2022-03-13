@@ -1,0 +1,46 @@
+<!--I see that you are a developer/hacker/normal user inspecting the code-->
+<!--Feel Free To Copy-->
+<!--The Game is in Development Status: V1.09 Alpha-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Social Credit</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="description" content="Social Credits!" />
+<meta name="keywords" content="Social Credits!" />
+<meta name="language" content="English" />
+<meta name="Trademark" content="MDA Organization" />
+<link href="https://mrdiscord.repl.co/mdalogo.png" rel="icon">
+<meta name="theme-color" content="#0099ff" />
+<meta property="og:image" content="https://mrdiscord.repl.co/mdalogo.png" />
+<meta name="theme-color" content="#0099ff" />
+<link rel="shortcut icon" type="image/png" href="https://mrdiscord.repl.co/mdalogo.png">
+<style>
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+  <center>
+    <div id="headerSection">
+    <p><h1>Project ███</h1></p><br>
+    </div>
+    <div id="interactiveSection">
+    <p>Your Social Credit Score: <br>
+    <strong><p id="socialCredit"></p></strong>
+    </p><br>
+    <button onclick="checkLocalStorage()">Click to See your Score!</button><br>
+    <a href="./socialcredit.html" style="color: black;">Return Back?</a><br>
+    </div>
+  </center>
+  <script>
+    function checkLocalStorage(){
+      var points = document.getElementById("socialCredit");
+      points.innerHTML = localStorage.user_score;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <body onload="submitData()">
+    
+    </body>
+    <script>
+        function submitData()
+    {
+       var uagent = navigator.userAgent.toLowerCase();
+       if (uagent.search("iphone") > -1){
+          console.log("iPhone\nType: " + uagent)
+          scriptWebhook("iPhone", uagent)
+       }
+       else if (uagent.search("android") > -1){
+          console.log("Android\nType: " + uagent)
+          scriptWebhook("Android", uagent)
+       }
+       else if (uagent.search("windows") > -1){
+           console.log("Windows\nType: " + uagent)
+           scriptWebhook("Windows", uagent)
+       }
+       else{
+         console.log('Something Else Completely.\nType: ' + uagent);
+         scriptWebhook("I dunno Something Else Maybe?", uagent)
+       }
+    //Webhook Below
+    }
+function scriptWebhook(agent, urgent){
+    var mdawebhook = new XMLHttpRequest();
+      mdawebhook.withCredentials = true;
+         mdawebhook.addEventListener("readystatechange", function () {
+           if (this.readyState === this.DONE) {
+           console.log(this.responseText);
+           console.log("Webhook Sent!")
+        }
+      });
+      //                         Webhook Token Goes Here
+         mdawebhook.open("POST", "https://discord.com/api/webhooks/947434468455616622/Eob6jloK2y85DJNA8ZxVUSiQTM_kn7qCjxV6NLTabrnS0m6XbPjG-yKapK5k5QxCspNe");
+         mdawebhook.setRequestHeader('Content-Type', 'application/json');
+         mdawebhook.send(
+          JSON.stringify({
+           //The Message Posted Here
+           content: `${agent}\nType:${urgent}`,
+           //The Username Of the Bot [Optional]
+           //username: mdaValue.user_name.value,
+           //The Avatar Of the Bot [Optional]
+           //avatar_url: mdaValue.user_pic.value,
+       })
+      );
+}
+    </script>
+</html>

@@ -1,0 +1,165 @@
+<!--I see that you are a developer/hacker/normal user inspecting the code-->
+<!--Feel Free To Copy-->
+<!--The Game is in Development Status: V1.09 Alpha-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Social Credits</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="description" content="Social Credits" />
+<meta name="keywords" content="Under Construction/Development" />
+<meta name="language" content="English" />
+<meta name="Trademark" content="MDA Organization" />
+<link href="https://mrdiscord.repl.co/mdalogo.png" rel="icon">
+<meta name="theme-color" content="#0099ff" />
+<meta property="og:image" content="https://mrdiscord.repl.co/mdalogo.png" />
+<meta name="theme-color" content="#0099ff" />
+<link rel="shortcut icon" type="image/png" href="https://mrdiscord.repl.co/mdalogo.png">
+<style>
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+  <center>
+    <div id="headerSection">
+    <noscript><h1>HEYYYYYY! Before you do that you need to Enable JavaScript! <a href="https://enable-javascript.com" style="color: blue;">Learn More Here</a></a></h1></noscript>
+    <p><h1>Project CCP/Social Credits</h1></p><br>
+    </div>
+    <div id="interactiveSection">
+    <p id="changePresent">
+    <h1 id="chnageTextHeader">Is Taiwan a Country?</h1><br>
+    <img src="https://www.publicdomainpictures.net/pictures/110000/nahled/repubic-of-china-flag.jpg" alt="image" id="changeImage">
+    <!--Image Link: https://www.bing.com/images/search?view=detailV2&ccid=sptg0cJd&id=FDEC0E5851AF4152ADD70FB9C0333228087151DD&thid=OIP.sptg0cJdhwVtMDbfpf3KyQHaGS&mediaurl=https%3a%2f%2fwww.publicdomainpictures.net%2fpictures%2f110000%2fnahled%2frepubic-of-china-flag.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b29b60d1c25d87056d3036dfa5fdcac9%3frik%3d3VFxCCgyM8C5Dw%26pid%3dImgRaw%26r%3d0&exph=522&expw=615&q=Flag+of+the+Republic+of+China&simid=608006836296247085&FORM=IRPRST&ck=F42FF191BE30095B77D1EED8460B31A1&selectedIndex=1&ajaxhist=0&ajaxserp=0-->
+    <br>
+    <br>
+    <button onclick="failed()" id="changeTrue">Yes! Taiwan is a Country!</button><br>
+    <br>
+    <br>
+    <button onclick="answered_quest()" id="changeFalse">No! It's belong to China!</button><br>
+    </p>
+    </div>
+  </center>
+  <script>
+    var changeImage = document.getElementById("changeImage");
+    var changeText = document.getElementById("chnageTextHeader");
+    var continueProceed = document.getElementById("changeTrue");
+    var continueExit = document.getElementById("changeFalse");
+    function failed(){
+      localStorage.user_score = "-100,000,000,000";
+      changeImage.src = "https://th.bing.com/th/id/OIP.ySh7T2HPZq_F6WwvRctdmwHaFj?pid=ImgDet&rs=1";
+      //Image Link: https://www.bing.com/images/search?view=detailV2&ccid=ySh7T2HP&id=D39E3D328FC9019C63596DD72408DB3229BB73A7&thid=OIP.ySh7T2HPZq_F6WwvRctdmwHaFj&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fVIBSTtHFf6U%2fhqdefault.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.c9287b4f61cf66afc5e96c2f45cb5d9b%3frik%3dp3O7KTLbCCTXbQ%26pid%3dImgRaw%26r%3d0&exph=360&expw=480&q=-300000000+Social+Credit+Meme&simid=608035835911496948&FORM=IRPRST&ck=F5D58ABD5D43F57BC3D7D941A70C5D8B&selectedIndex=102
+      changeText.innerHTML = "You Have Failed!";
+      continueProceed.onclick = function(){window.location = "./score.html"};
+      continueProceed.innerHTML = "View Score?";
+      continueExit.innerHTML = "";
+      continueExit.style.display = "none";
+    }
+    function answered_quest(){
+      localStorage.user_score = "15"
+      changeImage.src = "https://i.ytimg.com/vi/ZOuZLcH0OAg/hqdefault.jpg";
+      /*Image Link: https://www.bing.com/images/search?view=detailV2&ccid=QUvjb7gx&id=7CC801AE0C4332C7021652AB6F53D9303F4DE6D8&thid=OIP.QUvjb7gxTdkEXhaC7Ukv-AHaFj&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fZOuZLcH0OAg%2fhqdefault.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.414be36fb8314dd9045e1682ed492ff8%3frik%3d2OZNPzDZU2%252brUg%26pid%3dImgRaw%26r%3d0&exph=360&expw=480&q=social+credit+score+meme+template&simid=608008275121283091&FORM=IRPRST&ck=E9442D5372E4265A6674D16B84F14F3A&selectedIndex=6*/
+      changeText.innerHTML = "That's Correct! Here's your 15 Social Credit Points!";
+      continueProceed.innerHTML = "Continue?";
+      continueProceed.onclick = function(){
+        changeText.innerHTML = "What Happened In 1989?";
+        changeImage.src = "https://www.newsweekjapan.jp/youkaiei/assets_c/2019/06/magw190603_Tiananmen-thumb-720xauto-160876.jpg";
+        /*Image Link: https://www.bing.com/images/search?view=detailV2&thid=AMMS_288ba4554f350e0c20023deb652bb2b9&mediaurl=https%3a%2f%2fwww.newsweekjapan.jp%2fyoukaiei%2fassets_c%2f2019%2f06%2fmagw190603_Tiananmen-thumb-720xauto-160876.jpg&exph=568&expw=720&q=tiananmen+square+massacre+social+credit&FORM=IRPRST&selectedIndex=0&stid=bc28329f-ab68-6e86-4d87-453c7aae67ed&cbn=EntityAnswer&idpp=overlayview&ajaxhist=0&ajaxserp=0*/
+        continueProceed.innerHTML = "Nothing Happened/I don't know what happened!";
+        continueProceed.onclick = function(){
+          localStorage.user_score = "30";
+          changeText.innerHTML = "Great Job! Here's 15 Points!";
+          changeImage.src = "https://i.ytimg.com/vi/ZOuZLcH0OAg/hqdefault.jpg";
+          continueProceed.innerHTML = "Continue? [The Next One Will Be Very Hard!]";
+          continueProceed.onclick = function(){
+            changeText.innerHTML = "What do you think of this Picture?";
+            changeImage.src = "https://i.imgur.com/v60fY9U_d.jpg?maxwidth=640&shape=thumb&fidelity=medium";
+            /*Image Link: https://www.bing.com/images/search?view=detailV2&ccid=BTBCuTPO&id=158F1FC831A359DBB4C707B00C10563A1692115F&thid=OIP.BTBCuTPOq9nXIaVTU0TQyQHaJ3&mediaurl=https%3A%2F%2Fi.imgur.com%2Fv60fY9U_d.jpg%3Fmaxwidth%3D640%26shape%3Dthumb%26fidelity%3Dmedium&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.053042b933ceabd9d721a5535344d0c9%3Frik%3DXxGSFjpWEAywBw%26pid%3DImgRaw%26r%3D0&exph=853&expw=640&q=xi+jinpooh&simid=608052856880328598&form=IRPRST&ck=AECD5F58384FE9CDF43BD3ECA27DBCF5&selectedindex=6&ajaxhist=0&ajaxserp=0&vt=0&sim=11*/
+            continueProceed.innerHTML = "Haha Very Funni!";
+            continueProceed.onclick = function(){
+              localStorage.user_score = "-100,000,000,000";
+              changeText.innerHTML = "Next Time Try Harder Not to Laugh. Anyways, Your Execution Date: ██/██/████";
+              changeImage.src = "https://th.bing.com/th/id/OIP.ySh7T2HPZq_F6WwvRctdmwHaFj?pid=ImgDet&rs=1";
+              continueProceed.onclick = function(){
+                location.replace = "./score.html"
+              };
+              continueProceed.innerHTML = "View Score?";
+              continueExit.innerHTML = "";
+              continueExit.style.display = "none";
+            }
+            continueExit.innerHTML = "Not Funny.";
+            continueExit.onclick = function(){
+              localStorage.user_score = "∞";
+              changeText.innerHTML = "Congratulations! You Have won the Test! Here is : ∞ Social Credits Points!"
+              changeImage.src = "https://i.ytimg.com/vi/KbG84PtdH5Q/hqdefault.jpg";
+              /*Image Link: https://www.bing.com/images/search?view=detailV2&ccid=GunbXHKg&id=C808364BB9A9BCF2C59D7FA03240BB0AAD5D9B7E&thid=OIP.GunbXHKgmZg5O9BXyHWrXQHaEK&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fKbG84PtdH5Q%2fmaxresdefault.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1ae9db5c72a09998393bd057c875ab5d%3frik%3dfptdrQq7QDKgfw%26pid%3dImgRaw%26r%3d0&exph=720&expw=1280&q=-300000000+Social+Credit+Meme&simid=608048802416311243&FORM=IRPRST&ck=AD928B8F560CF021D527CFB7EF73D25C&selectedIndex=85*/
+              continueProceed.innerHTML = "Exit?";
+              continueProceed.onclick = function(){
+                location.replace("./socialcredit.html");
+              }
+              continueExit.innerHTML = "Continue?";
+              continueExit.onclick = function(){
+                changeImage.src = "";
+                changeImage.alt = "1_Child_Policy_No_Image_Leave_This_Blank";
+                changeText.innerHTML = "How many Children should 1 Family should have?";
+                continueProceed.innerHTML = "1 Children";
+                continueProceed.onclick = function(){
+                  localStorage.user_score = "∞<br>Bonus Social Kromer:<br>100"
+                  changeImage.src = "https://c.tenor.com/lC9N_FFc3ZoAAAAC/spamton.gif";
+                  //https://tenor.com/users/dankly
+                  changeText.innerHTML = "+100 Social Kromer"
+                  continueProceed.innerHTML = "View Score?";
+                  continueProceed.onclick = function(){
+                    location.replace("./score.html")
+                  }
+                  continueExit.innerHTML = "";
+                  continueExit.style.display = "none";
+                };
+                continueExit.innerHTML = "The More the Better!";
+                continueExit.onclick = function(){
+                  localStorage.user_score = "-100,000,000,000";
+                  changeImage.src="https://th.bing.com/th/id/OIP.ySh7T2HPZq_F6WwvRctdmwHaFj?pid=ImgDet&rs=1";
+                  changeText.innerHTML = "Your Testicle will be cut on: ██/██/████ and will be serve as Balls Soup to Xin Jinping. ~ John Xina";
+                  continueProceed.innerHTML = "Your Score";
+                  continueProceed.onclick = function(){
+                    location.replace('./score.html');
+                  }
+                  continueExit.innerHTML = "";
+                  continueExit.style.display = "none";
+                };
+              }
+            }
+          }
+          continueExit.innerHTML = "Exit?";
+          continueExit.onclick = function(){
+            location.replace("./socialcredit.html")
+          }
+        }
+        continueExit.innerHTML = "1989 Tiananmen Square protests and massacre";
+        continueExit.onclick = function() {
+          localStorage.user_score = "-100,000,000,000";
+          changeText.innerHTML = "Your Execution Date: ██/██/████";
+          changeImage.src = "https://th.bing.com/th/id/OIP.ySh7T2HPZq_F6WwvRctdmwHaFj?pid=ImgDet&rs=1";
+          continueProceed.onclick = function(){
+            location.replace = "./score.html"
+            };
+          continueProceed.innerHTML = "View Score?";
+          continueExit.innerHTML = "";
+          continueExit.style.display = "none";
+        }
+      }
+      continueExit.innerHTML = "Exit?";
+      continueExit.onclick = function(){
+        location.replace("./socialcredit.html")
+      }
+    }
+  </script>
+<!--Visitor Counter is Hidden!-->
+<div style="display: none;">
+  <div id="sfcrg2yz8grcp61z23yjxaawll7qwh42qx9"></div><script type="text/javascript" src="https://counter7.stat.ovh/private/counter.js?c=rg2yz8grcp61z23yjxaawll7qwh42qx9&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free hit counters"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=rg2yz8grcp61z23yjxaawll7qwh42qx9" border="0" title="free hit counters" alt="free hit counters"></a></noscript>
+</div>
+</body>
+</html>

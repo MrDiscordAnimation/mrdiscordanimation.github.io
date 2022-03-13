@@ -1,0 +1,250 @@
+<!--I see that you are a developer/hacker/normal user inspecting the code-->
+<!--Feel Free To Copy-->
+<!--The Game is not longer in Development Status: V1.09 Alpha-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Social Credits</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="description" content="Social Credits!" />
+<meta name="keywords" content="Social Credits!" />
+<meta name="language" content="English" />
+<meta name="Trademark" content="MDA Organization" />
+<link href="https://mrdiscord.repl.co/mdalogo.png" rel="icon">
+<meta name="theme-color" content="#0099ff" />
+<meta property="og:image" content="https://mrdiscord.repl.co/mdalogo.png" />
+<meta name="theme-color" content="#0099ff" />
+<link rel="shortcut icon" type="image/png" href="https://mrdiscord.repl.co/mdalogo.png">
+<!--<script src="./assets/modal.ip.js"></script>-->
+<link href="./assets/modal.css" rel="stylesheet" type="text/css" />
+<style>
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+  <center>
+    <div id="headerSection">
+    <p><h1>Project CCP/Social Credits</h1> is now Available!</p><br>
+    </div>
+    <div id="interactiveSection">
+    <p>
+      <noscript>
+        <h2>JavaScript is Not Enabled!</h2><br>
+        <h2>This Website Require JavaScript to Work!</h2>
+        <h2><a href="https://enable-javascript.com">Click Here</a> to Learn More</h2>
+      </noscript>
+      <button onclick="location.replace('./')">Main Page</button>
+      <button onclick="location.replace('./socialcredits.html')">New Game</button><br>
+      <button onclick="location.replace('./socialcreditchina.html')">New Game [China Edition]</button><br>
+      <button onclick="location.replace('./assets/beta_script.shtml')">New Game [Christmas Special!]</button><br>
+      <button onclick="location.replace('./score.html')">View Score?</button><br>
+      <button onclick="modalResetDisplay()">Reset</button><br>
+      <button onclick="audioCustom()">Customization</button><br>
+      <button onclick="alert('Mr Discord Animation')">Credits</button><br>
+      <button onclick="location.replace('./techstuff.html')"><p style="color: green;">Need Help/Support?</p></button><br>
+      <button onclick="location.replace('./techstuff.html')"><p style="color: red;">Report Bug?</p></button><br>
+      <button onclick="modalDisplay()">Contact Information</button>
+      </p>
+    </div>
+    <div id="footerSection">
+      <p>Copyright © or Something Like That 2021</p><br>
+      <p>This Website is Managed By:</p><br>
+      <img src="./assets/copyrightSvg.svg" alt="youtubeMrDiscordAnimation.ip" onclick="window.location.replace('https://bit.ly/ChannelMDAYT')" style="cursor: pointer;">
+    </div>
+  </center>
+<!--All JavaScript Will Be stored in ./assets/modal.ip.js-->
+<!-- The Customization Modal -->
+<div id="custom" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('custom').style.display = 'none'">&times;</span>
+      <!--Insert Here-->
+      <h1>Game Customization</h1>
+      <p>Change The Audio [Must Be a Link/URL]<div style="color: red" title="The Input is Required! As a URL!">*</div></p>
+      <form>
+      <input type="url" id="audioChange">
+      </form>
+      <br>
+      <p id="checkAudis"></p>
+      <br>
+      <button onclick="confirmAudio()" style="color: green;">Change URL</button>
+      <button onclick="resetAudio()" style="color: red;">Reset Audio to Default</button>
+      <br>
+      <button onclick="checkAudios()">Check Current Audio</button>
+    </div>
+  <script>
+  var para = document.getElementById('checkAudis');
+  var custo = document.getElementById('custom');
+  function checkAudios(){
+  para.innerHTML = "The Audio that you stored is: "+localStorage.audioSettings;
+  }
+  function resetAudio(){
+    localStorage.audioSettings = "https://mrdiscord.repl.co/Red%20Sun%20In%20The%20Sky%20-%20The%20Social%20Credit.mp3";
+    //custo.style.display = "none";
+    //resetTrue.style.display = "block";
+    para.innerHTML = "You have Reset your Audio Data Successfully!"
+  }
+  function confirmAudio(){
+  //custo.style.display = "none";
+  //resetFalse.style.display = "block";
+  var audioChange = document.getElementById("audioChange");
+    localStorage.audioSettings = audioChange.value;
+  para.innerHTML = "You have Change The URL Of The Audio Successfully!";
+  }
+  function audioCustom(){
+    custo.style.display = "block";
+  }
+  /*function modalResetExitTrue(){
+    resetTrue.style.display = "none";
+  }
+  function modalResetExitFalse(){
+    resetFalse.style.display = "none";
+  }*/
+  </script>
+  
+  </div>
+  
+  <!-- The Modal -->
+  <div id="mdaModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modalExit()" >&times;</span>
+      <!--Insert Here-->
+      <h1>MDA Contact Information</h1><br>
+      <p>
+        <a href="mailto:mrdiscordanimation@gmail.com" style="color: black">mrdiscordanimation@gmail.com</a><br>
+        <a href="https://dsc.gg/hackerz" style="color: black">Discord Server: https://dsc.gg/hackerz or https://discord.io/mdaserver</a><br>
+        Telegram:<br>
+        <a href="https://t.me/mrdiscordanimation" style="color: black">https://t.me/mrdiscordanimation</a><br>
+        <a href="https://t.me/mdaorgsofficial" style="color: black">https://t.me/mdaorgsofficial</a><br>
+        <a href="https://t.me/mdaannouncement" style="color: black">https://t.me/mdaannouncement</a><br>
+        <a href="https://facebook.com/mrdiscordanimation" style="color: black">https://facebook.com/mrdiscordanimation</a><br>
+        <a href="https://facebook.com/mdaorgsofficial" style="color: black">https://facebook.com/mdaorgsofficial</a><br>
+        <a href="https://twitter.com/mdaytofficial" style="color: black">https://twitter.com/mdaytofficial</a><br>
+        <a href="https://bit.ly/ChannelMDA" style="color: black">https://bit.ly/ChannelMDA</a>
+      </p>
+    </div>
+  
+  </div>
+  
+  
+  
+  <!-- The Modal -->
+  <div id="mdaReset" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modalResetExit()">&times;</span>
+      <!--Insert Here-->
+      <h1 style="color: red;">RESET GAME CONFIRMATION!</h1>
+      <p>ARE YOU SURE? DO YOU WANT TO TO RESET THE GAME?</p>
+      <p>ALL PROGRESS WILL BE LOST!</p>
+      <button onclick="resetConfirm()" style="color: red;">Proceed/Confirm/Yes</button>
+      <button onclick="resetCancel()" style="color: green;">Cancel/No</button>
+    </div>
+  <script>
+  //var resetTrue = document.getElementById("mdaResetModal");
+  //var resetFalse = document.getElementById("mdaCancelModal");
+  function resetConfirm(){
+    localStorage.user_score = "";
+    localStorage.audioSettings = "https://mrdiscord.repl.co/Red%20Sun%20In%20The%20Sky%20-%20The%20Social%20Credit.mp3";
+    resetModal.style.display = "none";
+    //resetTrue.style.display = "block";
+    alert("We have Reset your Data Successfully!")
+  }
+  function resetCancel(){
+  resetModal.style.display = "none";
+  //resetFalse.style.display = "block";
+  alert("You have Aborted the Reset!")
+  }
+  /*function modalResetExitTrue(){
+    resetTrue.style.display = "none";
+  }
+  function modalResetExitFalse(){
+    resetFalse.style.display = "none";
+  }*/
+  </script>
+  
+  </div>
+  
+  
+  
+  <!-- The Modal -->
+  <div id="mdaResetModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modalResetExitTrue()">&times;</span>
+      <!--Insert Here-->
+      <h1 style="color: green;">We Have Successfully Resetted your Progress!</h1><br>
+      <p>You May Now Close this Window!</p>
+    </div>
+  
+  </div>
+  
+  
+  
+  <!-- The Modal -->
+  <div id="mdaCancelModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modalResetExitFalse()">&times;</span>
+      <!--Insert Here-->
+      <h1 style="color: green">You Have Cancelled The Reset</h1><br>
+      <p>You May Now Close this Window!</p>
+    </div>
+  
+  </div>
+  <script>
+  // Get the modal
+  var modal = document.getElementById("mdaModal");
+  var resetModal = document.getElementById("mdaReset");
+  
+  // Get the button that opens the modal
+  //var btn = document.getElementById("mdasTriggers");
+  
+  // Get the <span> element that closes the modal
+  //var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  function modalDisplay() {
+    modal.style.display = "block";
+  }
+  
+  function modalResetDisplay(){
+    resetModal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  function modalExit() {
+    modal.style.display = "none";
+  }
+  
+  function modalResetExit(){
+    resetModal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <center>
+    <!--Discord Server Preview Plugin Code-->
+    <iframe src="https://discord.com/widget?id=834024110714781737&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<!--Visitor Counter is Hidden!-->
+<div style="display: none;">
+    <div id="sfcrg2yz8grcp61z23yjxaawll7qwh42qx9"></div><script type="text/javascript" src="https://counter7.stat.ovh/private/counter.js?c=rg2yz8grcp61z23yjxaawll7qwh42qx9&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free hit counters"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=rg2yz8grcp61z23yjxaawll7qwh42qx9" border="0" title="free hit counters" alt="free hit counters"></a></noscript>
+</div>
+</center>
+</body>
+</html>

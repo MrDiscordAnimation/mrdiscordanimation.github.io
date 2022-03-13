@@ -1,0 +1,12 @@
+<script>
+    function test(content){
+        document.getElementById('f').contentWindow.postMessage(`${content}`, '*')
+    }
+    function sendTest(){
+        var send = document.getElementById("msg");
+        test(send);
+    }
+</script>
+<!--<input type="text" name="" id="msg">-->
+<!--<button onclick="sendTest()">Submit</button>-->
+<iframe src="./telecom.html" id="f" onload="test('sqtLimited')"></iframe>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MDA Official</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Official Website Of MDA Organization, Mr Discord Animation and Mister Discord Anime" />
+    <meta name="keywords" content="MDA Official" />
+    <meta name="language" content="English" />
+    <meta name="Trademark" content="Mr Discord Animation, Mister Discord Anime" />
+    <link href="https://mrdiscordanimations.web.app/favicon.ico" rel="icon">
+    <meta name="theme-color" content="#00F7FF" />
+    <meta property="og:image" content="https://mrdiscordanimations.web.app/favicon.ico" />
+    <link href="./revised-css.css" rel="stylesheet" type="text/css" />
+    <link href="./popup.css" rel="stylesheet" type="text/css" />
+    <script lang="JavaScript">
+      function winsForm(mdaValue){
+          //Opens Up A New Window with The Data You Sent
+          var winds = window.open('', '', 'width=300,height=200');
+          winds.document.write("<h1>Webhook Data You Sent!</h1>")
+          var name_input = "<b>Webhook Name: "+mdaValue.user_name.value+"</b><br>";
+          winds.document.write(name_input);
+          var message_input = "<b>Webhook Message: "+mdaValue.user_things.value+"</b><br>";
+          winds.document.write(message_input);
+          var avatar_input = "<b>Webhook Avatar<br>: <img src='"+mdaValue.user_pic.value+"'></b><br>";
+          winds.document.write(avatar_input);
+          var webhook_input = "<b>Webhook URL/Link<br>: <a href='"+mdaValue.user_webhook.value+"'>"+mdaValue.user_webhook.value+"</a></b><br>";
+          winds.document.write(webhook_input);
+          winds.document.write('<font><a href="javascript:void(0)" onclick="window.close()">Close Window</a></font>')
+          //Sending Webhooks
+            var mdawebhook = new XMLHttpRequest();
+            mdawebhook.withCredentials = true;
+               mdawebhook.addEventListener("readystatechange", function () {
+                 if (this.readyState === this.DONE) {
+                 console.log(this.responseText);
+              }
+            });
+            //                         Webhook Token Goes Here
+               mdawebhook.open("POST", mdaValue.user_webhook.value);
+               mdawebhook.setRequestHeader('Content-Type', 'application/json');
+               mdawebhook.send(
+                JSON.stringify({
+                 //The Message Posted Here
+                 content: mdaValue.user_things.value,
+                 //The Username Of the Bot [Optional]
+                 username: mdaValue.user_name.value,
+                 //The Avatar Of the Bot [Optional]
+                 avatar_url: mdaValue.user_pic.value,
+             })
+            );
+            console.log('Webhook Sent Via MDA Debugging Site.')
+        }
+        //Some Code I included
+        function wait(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+            //miliseconds only
+        }
+      </script>
+</head>
+</head>
+<body>
+
+<div class="header">
+  <h1>MDA Organization</h1>
+  <p>The Official Home Page of MDA Organization</p>
+</div>
+
+<div class="navbar">
+    <a href="./socialcredit.html">Social Credit</a>
+    <a href="./anticovid.html">AntiCovid Scanner</a>
+    <a href="./mdagame.html">New Games</a>
+    <a href="./jsimpact.html">JS Impact</a>
+    <a onclick="modalDisplay()" class="pointer">Login</a>
+  <a href="https://mdaorgs.page.link/discord" class="right">Discord Server</a>
+  <a href="https://bit.ly/ChannelMDA" class="right">YouTube Channel</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>Latest News</h2>
+    <h5>JS Impact will be Delayed Until Further Notice</h5>
+    <img src="./assets/JSImpactAnimation.png" height="250" length="250" class="fakeimg">
+    <p><tt>JS Impact Loading Screen</tt></p>
+  <h2>Discord Server Status</h2>
+    <!--Discord Server Preview Plugin Code-->
+  <iframe src="https://discord.com/widget?id=834024110714781737&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  <hr>
+  <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103845648631488");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </div>
+<div class="main">
+<div class="changefont">
+
+</div>
+</div>
+
+<div class="footer">
+  <h2>This Website is Managed By Mr Discord Animation and MDA Organization.</h2><br>
+  <h2>Contact Us: <a href="mailto:mda@amogus.email">mda@amogus.email</a></h2>
+</div>
+</head>
+
+
+
+
+<!-- The Modal -->
+<div id="thingsModal" class="thinkmodal">
+  <div class="modal-content">
+    <span class="close" onclick="modalExit()">&times;</span>
+    <h1 id="headerLogin">Login</h1><br>
+    <script src="./entryLogin.js"></script>
+<div id="bodyLogin">
+<h4>User:</h4><br>
+<input type="text" id="usr"><br>
+<h4>Entry Code:</h4><br>
+<input type="text" id="pwd"><br>
+<h4>Entry Access Key:</h4><br>
+<input type="text" id="cpt"><br>
+<button onclick="checkUser()">Submit</button>
+</div>
+  </div>
+
+</div>
+<script>
+var modal = document.getElementById("thingsModal");
+function modalDisplay() {
+  modal.style.display = "block";
+}
+function modalExit() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+var s = new URLSearchParams(location.search);
+if ((s).has("setLocal")){
+  localStorage.loggedIn = (s).get("setLocal");
+}
+if ((s).has("delLocal")){
+  localStorage.clear()
+}
+if ((s).has("atob")){
+  console.log("Decrypted Message:\n" + atob((s).get("atob")))
+}
+if ((s).has("btoa")){
+  console.log("Encrypted Message:\n" + btoa((s).get("btoa")))
+}
+</script>
+</body>
+</html>
