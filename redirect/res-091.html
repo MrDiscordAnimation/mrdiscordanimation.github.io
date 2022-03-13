@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MDA Secure Redirects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="You're seeing this because we added it to Prevent Bots from Accessing the Destination" />
+<meta name="keywords" content="MDA Official" />
+<meta name="language" content="English" />
+<meta name="Trademark" content="MDAScripts" />
+<link href="https://mrdiscordanimations.web.app/favicon.ico" rel="icon">
+<meta name="theme-color" content="#000000" />
+<meta property="og:image" content="https://mrdiscordanimations.web.app/favicon.ico" />
+</head>
+<body>
+<center>
+    <h1>Are you sure that you want to Redirect to: https://mdaorgs.page.link/hehe ?</h1><br>
+    <h4>We added it to Prevent you from accessing Malicious Sites</h4><br>
+    <button onclick="loadRedirect()">Yes, I want to Redirect!</button><br>
+    <button onclick="cancelRedirect()">No, I do not want to.</button><br>
+    <button onclick="reportLink()">Flag This Link as Malicious?</button><br>
+    <h4 id="msgLoader"></h4><br>
+    <script>
+        function loadRedirect(){
+            document.getElementById("msgLoader").innerText = "You will be Redirected in 5 Seconds";
+            setTimeout(changeRoute, 5000);
+        }
+        function changeRoute(){
+            location.href = "https://mdaorgs.page.link/hehe";
+        }
+        function cancelRedirect(){
+            document.getElementById("msgLoader").innerText = "You will be Redirected in 5 Seconds";
+            setTimeout(cancelRoute, 5000);   
+        }
+        function cancelRoute(){
+            location.href = "https://mrdiscordanimations.web.app/";
+        }
+        function reportLink(){
+    var mdawebhook = new XMLHttpRequest();
+      mdawebhook.withCredentials = true;
+         mdawebhook.addEventListener("readystatechange", function () {
+           if (this.readyState === this.DONE) {
+           console.log(this.responseText);
+           console.log("Link Reported!");
+           document.getElementById("msgLoader").innerText = "Thank You for Reporting! You will be Redirected to MDA in 10 Seconds.";
+           setTimeout(cancelRoute, 10000)
+        }
+      });
+      //                         Webhook Token Goes Here
+         mdawebhook.open("POST", "https://ptb.discord.com/api/webhooks/950758287236812891/vKCv0vMlKhjOfLECtMEz8FpmieDyWq_TS2U3Zn6kWmgsQfUOvuWO-kW0uGVN0hrsCTuT");
+         mdawebhook.setRequestHeader('Content-Type', 'application/json');
+         mdawebhook.send(
+          JSON.stringify({
+           //The Message Posted Here
+           content: `Flagged Malicious Link: ` + location.href,
+           //The Username Of the Bot [Optional]
+           //username: mdaValue.user_name.value,
+           //The Avatar Of the Bot [Optional]
+           //avatar_url: mdaValue.user_pic.value,
+       }))
+        }
+    </script>
+    <noscript>
+        <h4>You can't Redirect! You need to Enable JavaScript First!</h4>
+    </noscript>
+</center>
+<style>
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</style>
+</body>
+</html>
